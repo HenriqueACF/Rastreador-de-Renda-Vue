@@ -1,18 +1,22 @@
 <template>
-    <header> Income Tracker </header>
-    <div class="total-income"> R$0 </div>
+    <header>
+        <h1>Income Tracker </h1>
+        <div class="total-income"> R${{ totalIncome }} </div>
+     </header>
 </template>
 
 <script>
 export default {
-    
+    props: {
+        totalIncome:Number
+    }
 }
 </script>
 
 <style scoped>
     header {
         display:flex;
-        justify-content:center;
+        justify-content:space-between;
         align-items:center;
         padding:15px 30px;
         background-color:#313131;
@@ -30,11 +34,11 @@ export default {
         color: #FFF;
         font-size: 20px;
         font-weight: 900;
-        padding:5px 10px;
+        padding: 5px 10px;
         min-width: 100px;
         text-align: center;
         border-radius: 8px;
-        box-shadow: inset 0px 0px 6px rgba(0,0,0,0.25);
-        text-shadow: 0px 3px 3px rgba(0,0,0,0.25);
+        box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25);
+        text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
     }
 </style>
